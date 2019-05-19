@@ -1,5 +1,5 @@
 # Speedtest Graphing
-> Short blurb about what your product does.
+> What does this do
 
 
 This python script will allow you to graph your speedtest results over a period of time!
