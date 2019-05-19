@@ -17,9 +17,10 @@ sudo sh setup.sh
 
 ## Usage example
 
+```sh
 python3 main.py
 
-
+```
 ## Release History
 
 * 0.0.1
