@@ -4,14 +4,16 @@ import matplotlib.pyplot as plt
 import csv
 import datetime
 
+date = datetime.datetime.now()
+
 time = []
 download = []
 upload = []
 
-with open('example.txt','r') as csvfile:
+with open(date.strftime("%Y-%m-%d")+'.csv','r') as csvfile:
     plots = csv.reader(csvfile, delimiter=',')
     for row in plots:
-        time.append(int(row[0]))
+        time.append(row[0])
         download.append(int(row[1]))
         upload.append(int(row[2]))
 
