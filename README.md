@@ -4,7 +4,7 @@
 
 This python script will allow you to graph your speedtest results over a period of time!
 
-
+![alt text](https://raw.githubusercontent.com/kyleharte/Speedtest-Graphing/master/Examples/2019-05-19.png)
 ## Installation
 
 OS X & Linux
