@@ -19,7 +19,6 @@ sudo sh setup.sh
 
 ```sh
 python3 main.py
-
 ```
 ## Release History
 
