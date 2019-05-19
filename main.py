@@ -1,25 +1,23 @@
+#*                    Imports                          *#
 import speedtest
 import datetime
 import csv
 import pprint
-
-results = {}
-#*                                                     *#
+import csv
+#*                    Date                             *#
 date = datetime.datetime.now()
 #*                    Speedtest                        *#
 s = speedtest.Speedtest()
-download = s.download()
-upload = s.upload()
-ping = s.get_best_server()
-downmbits = download / 1e+6
-results["download"] = download
-results["ping"] = ping
-results["upload"] = upload
+download = round(s.download() / 1e+6)
+upload = round(s.upload() / 1e+6)
+results = [date.strftime("%Y-%m-%d"), download, upload]
 
 #*                    Prints                           *#
 
 pprint.pprint(results)
-print(date.strftime("%Y-%m-%d"))
+#*                    CSV                              *#
+with open(date.strftime("%Y-%m-%d") + '.csv', 'a') as csvFile:
+    writer = csv.writer(csvFile)
+    writer.writerow(results)
 
-print(downmbits)
-print(round(downmbits))
+csvFile.close()
